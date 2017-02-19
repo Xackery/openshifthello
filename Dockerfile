@@ -9,8 +9,9 @@ COPY . /go/src/github.com/xackery/openshifthello
 RUN cd /go/src/github.com/xackery/openshifthello \
 	&& go get -d -v \
 	&& go install \
-	&& go test github.com/xackery/openshifthello...
+	&& go test github.com/xackery/openshifthello... \
 	&& mkdir -p /go/src/github.com/xackery/openshifthello
+
 WORKDIR /go/src/github.com/xackery/openshifthello
 
 COPY . /go/src/github.com/xackery/openshifthello
